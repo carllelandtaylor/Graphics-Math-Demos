@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphics-Math-Demos", "Graphics-Math-Demos.csproj", "{1440109A-CA13-6565-68A4-9431A0E2CD98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphics-Math-Demos.Editor", "Graphics-Math-Demos.Editor.csproj", "{384F89D2-680F-7C7C-D9A6-44F5B9547C7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{1440109A-CA13-6565-68A4-9431A0E2CD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1440109A-CA13-6565-68A4-9431A0E2CD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1440109A-CA13-6565-68A4-9431A0E2CD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{384F89D2-680F-7C7C-D9A6-44F5B9547C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384F89D2-680F-7C7C-D9A6-44F5B9547C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384F89D2-680F-7C7C-D9A6-44F5B9547C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384F89D2-680F-7C7C-D9A6-44F5B9547C7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
