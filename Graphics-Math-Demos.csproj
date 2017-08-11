@@ -233,6 +233,7 @@
     <Compile Include="Assets\OculusIntegration\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderComponent.cs" />
     <Compile Include="Assets\OculusIntegration\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSComponent.cs" />
     <Compile Include="Assets\OculusIntegration\OvrAvatar\Scripts\OvrAvatarTouchController.cs" />
+    <Compile Include="Assets\Scripts\CollisionIgnoreGroup.cs" />
     <Compile Include="Assets\Scripts\DotProductCalculator.cs" />
     <Compile Include="Assets\TouchController.cs" />
   </ItemGroup>
