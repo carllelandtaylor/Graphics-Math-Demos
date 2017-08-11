@@ -29,10 +29,19 @@ public class DotProductCalculator : MonoBehaviour {
         var directionB = ArrowB.transform.rotation * Vector3.right;
 
         var result = Vector3.Dot(directionA, directionB);
-        TextComponent.text = string.Format("direction A: {0}\ndirection b:{1}\nangle between: {2}\ndot product: {3}",
-            directionA,
-            directionB,
-            Vector3.Angle(directionA, directionB),
-            result);
+        var lines = new string[]{
+            "DOT PRODUCT",
+            string.Format("Vector A (orange): {0}", directionA),
+            string.Format("Vector B (yellow): {0}", directionB),
+            string.Format("A·B = ({0} * {1}) + ({2} * {3}) + ({4} * {5}) = {6}",
+                directionA.x.ToString("n1"),
+                directionB.x.ToString("n1"),
+                directionA.y.ToString("n1"),
+                directionB.y.ToString("n1"),
+                directionA.z.ToString("n1"),
+                directionB.z.ToString("n1"),
+                result.ToString("n1")),
+        };
+        TextComponent.text = string.Join("\n", lines);
 	}
 }
