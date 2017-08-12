@@ -3,8 +3,8 @@
 public class TouchController : MonoBehaviour {
     public OVRInput.Controller AssignedController;
 	
-	// Update is called once per frame
-	void Update () {
+	// Update in FixedUpdate since this controller drives a model with a physics collider.
+	void FixedUpdate () {
         transform.localPosition = OVRInput.GetLocalControllerPosition(AssignedController);
         transform.localRotation = OVRInput.GetLocalControllerRotation(AssignedController);
     }
