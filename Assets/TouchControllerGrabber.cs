@@ -52,9 +52,11 @@ public class TouchControllerGrabber : MonoBehaviour
         }
     }
 
-    private void GrabObject(GameObject obj) {
+    public void GrabObject(GameObject obj) {
         GrabbedObject = obj;
         GrabbedObjectRigidbody = obj.GetComponent<Rigidbody>();
+
+        GrabbedObject.GetComponent<GrabbableObject>().Grab(this);
 
         var objCollider =  obj.GetComponent<Collider>();
         if (objCollider != null) {
@@ -67,9 +69,10 @@ public class TouchControllerGrabber : MonoBehaviour
             GrabbedObjectRigidbodyWasKinematic = GrabbedObjectRigidbody.isKinematic;
             GrabbedObjectRigidbody.isKinematic = true;
         }
+
     }
 
-    private void ReleaseObject() {
+    public void ReleaseObject() {
         var objCollider = GrabbedObject.GetComponent<Collider>();
         foreach (var handCollider in CollidersGrabbedObjectsIgnore)
         {
@@ -77,7 +80,10 @@ public class TouchControllerGrabber : MonoBehaviour
         }
 
         GrabbedObjectRigidbody.isKinematic = GrabbedObjectRigidbodyWasKinematic;
+        GrabbedObject.GetComponent<GrabbableObject>().Release();
+
         GrabbedObject = null;
         GrabbedObjectRigidbody = null;
+
     }
 }
