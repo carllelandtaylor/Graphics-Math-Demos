@@ -15,7 +15,8 @@ public class DotProductCalculator : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         // Because this visualization is for the dot product of two vectors, we need to build
         // direction vectors out of the rotations to take the dot product of. We might be tempted
         // to simply take the dot product of the two rotations, but any given vector can have
@@ -29,7 +30,8 @@ public class DotProductCalculator : MonoBehaviour {
         var directionB = ArrowB.transform.rotation * Vector3.right;
 
         var result = Vector3.Dot(directionA, directionB);
-        var lines = new string[]{
+        var lines = new string[]
+        {
             "DOT PRODUCT",
             string.Format("Vector A (orange): {0}", directionA),
             string.Format("Vector B (yellow): {0}", directionB),

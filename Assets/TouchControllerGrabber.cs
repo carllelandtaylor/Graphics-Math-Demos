@@ -13,7 +13,8 @@ public class TouchControllerGrabber : MonoBehaviour
     private GameObject ObjectToGrab;
 
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
         GrabOrReleaseObject();
         UpdateGrabbedObjectTransform();
     }
@@ -52,7 +53,8 @@ public class TouchControllerGrabber : MonoBehaviour
         }
     }
 
-    public void GrabObject(GameObject obj) {
+    public void GrabObject(GameObject obj)
+    {
         GrabbedObject = obj;
         GrabbedObjectRigidbody = obj.GetComponent<Rigidbody>();
 
@@ -60,19 +62,22 @@ public class TouchControllerGrabber : MonoBehaviour
 
         var objCollider =  obj.GetComponent<Collider>();
         if (objCollider != null) {
-            foreach (var handCollider in CollidersGrabbedObjectsIgnore) {
+            foreach (var handCollider in CollidersGrabbedObjectsIgnore)
+            {
                 Physics.IgnoreCollision(handCollider, objCollider);
             }
         }
 
-        if (GrabbedObjectRigidbody != null) {
+        if (GrabbedObjectRigidbody != null)
+        {
             GrabbedObjectRigidbodyWasKinematic = GrabbedObjectRigidbody.isKinematic;
             GrabbedObjectRigidbody.isKinematic = true;
         }
 
     }
 
-    public void ReleaseObject() {
+    public void ReleaseObject()
+    {
         var objCollider = GrabbedObject.GetComponent<Collider>();
         foreach (var handCollider in CollidersGrabbedObjectsIgnore)
         {

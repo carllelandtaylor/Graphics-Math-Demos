@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class TouchController : MonoBehaviour {
+public class TouchController : MonoBehaviour
+{
     public OVRInput.Controller AssignedController;
     private Rigidbody RigidbodyToDrive;
 
@@ -9,7 +10,8 @@ public class TouchController : MonoBehaviour {
         RigidbodyToDrive = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate () {
+    void FixedUpdate ()
+    {
         // Update the transform in FixedUpdate so that if the GO we're controlling has a physics
         // collider, it will update its position as often as other physics calcs happen.
         UpdateTransformFromController();

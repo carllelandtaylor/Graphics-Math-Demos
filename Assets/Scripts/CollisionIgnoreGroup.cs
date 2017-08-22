@@ -7,10 +7,12 @@ using UnityEngine;
 /// Similar results can be achieved using layers; this is an alternative if using layers is not
 /// desired.
 /// </summary>
-public class CollisionIgnoreGroup : MonoBehaviour {
+public class CollisionIgnoreGroup : MonoBehaviour
+{
     public List<Collider> Colliders;
 
-    void Start () {
+    void Start ()
+    {
 		for (var i = 0; i < Colliders.Count; i++)
         {
             for (var j = i + 1; j < Colliders.Count; j++)
