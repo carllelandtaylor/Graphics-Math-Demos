@@ -236,6 +236,7 @@
     <Compile Include="Assets\Scripts\CollisionIgnoreGroup.cs" />
     <Compile Include="Assets\Scripts\DotProductCalculator.cs" />
     <Compile Include="Assets\TouchController.cs" />
+    <Compile Include="Assets\TouchControllerGrabber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\OculusIntegration\LICENSE.txt" />
