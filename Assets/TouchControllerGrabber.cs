@@ -20,7 +20,10 @@ public class TouchControllerGrabber : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ObjectToGrab = other.gameObject;
+        if (other.gameObject.GetComponent<GrabbableObject>() != null)
+        {
+            ObjectToGrab = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
