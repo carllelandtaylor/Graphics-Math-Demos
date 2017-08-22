@@ -36,18 +36,10 @@ public class TouchControllerGrabber : MonoBehaviour
 
     private void GrabOrReleaseObject()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, AssignedController)) {
-            if (GrabbedObject != null)
-            {
-                ReleaseObject();
-            }
-            else
-            {
-                if (ObjectToGrab != null)
-                {
-                    GrabObject(ObjectToGrab);
-                }
-            }
+        if (GrabbedObject == null && OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, AssignedController)) {
+            GrabObject(ObjectToGrab);
+        } else if (GrabbedObject != null && OVRInput.GetUp(OVRInput.Button.PrimaryHandTrigger, AssignedController)) {
+            ReleaseObject();
         }
     }
 
